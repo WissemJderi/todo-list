@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [todo, setTodo] = useState(["Read Quran", "Read Hadiths", "Read Fiqh"]);
+  const [todo, setTodo] = useState([]);
   const [currentTask, setCurrentTask] = useState();
   function addTask() {
     setTodo((prevArr) => [...prevArr, currentTask]);
@@ -60,11 +60,16 @@ function App() {
         onChange={(e) => {
           setCurrentTask(e.target.value);
         }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            addTask();
+          }
+        }}
       />
       <button
         className="add"
-        onClick={() => {
-          addTask();
+        onClick={(e) => {
+          addTask(e);
         }}
       >
         Add

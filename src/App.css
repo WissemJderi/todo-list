@@ -9,6 +9,7 @@ input {
   border-radius: 10px;
   border: 1px solid black;
   height: 30px;
+  padding-left: 10px;
 }
 .add {
   background-color: rgb(53, 53, 53);
