@@ -25,17 +25,22 @@ input {
   margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 20px;
   background-color: rgb(190, 190, 190);
   border-radius: 7px;
   padding: 5px;
   width: 400px;
 }
+
+.task > .btns {
+  display: flex;
+  gap: 10px;
+}
 .task > p {
   margin-right: 40px;
 }
-.task > button {
+.btns > button {
   border: none;
   padding: 10px 5px;
   border-radius: 7px;
